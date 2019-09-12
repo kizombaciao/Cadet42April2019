@@ -8,9 +8,6 @@
             return NULL;
         return $w;
     }
-	$array = "            Hello,      How can we help you?"; 
-    $s = "    Hello        World AAA   aaa   ";
-    print_r(ft_split($s)); 
 // PROBLEM WITH SORTING BY ABC, SORT IS NOT CASE INSENSITIVE!!!
 /*
 //array_filter() to remove extra spaces between words as well
