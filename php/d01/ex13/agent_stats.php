@@ -71,7 +71,7 @@
             }
             else if ($d[2] == "moulinette")
             {
-                $user[$d[0]]['moulinette'] = $d[1]; // ???
+                $user[$d[0]]['moulinette'] += $d[1]; // ???
             }
         }        
         if ($argv[1] == "average_user")
@@ -86,6 +86,7 @@
             foreach ($user as $k => $v)
             {
                 echo $k.":".(($d['sum'] / $d['count']) - $d['moulinette'])."\n";
+                //echo $k.":".(($d['sum'] / $d['count']) - $d['moulinette'])."\n";
             }
         }
     }
