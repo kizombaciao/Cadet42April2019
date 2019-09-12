@@ -1,6 +1,5 @@
 #!/usr/bin/php
 <?php
-
 function concat_args($argv, $argc)
 {
     $s = "";

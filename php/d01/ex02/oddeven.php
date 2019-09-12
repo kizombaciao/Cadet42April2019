@@ -3,12 +3,12 @@
     while (1)
     {
         echo "Enter a number:  ";
-        $line = trim(fgets(STDIN));
+        $line = trim(fgets(stdin));
         //if (!$line)
         //    break;
 
-        // ??? why need below test
-        if (feof(STDIN))
+        //??? why need below test
+        if (feof(stdin))
         {
             echo "\n";
             exit();
@@ -27,6 +27,7 @@
 The feof() function checks 
 if the "end-of-file" (EOF) has been reached for an open file.
 https://www.w3schools.com/php/func_filesystem_feof.asp
+//feof(STDIN) is needed to ensure that Ctrl+d works
 */
 /*
 trim() removes white spaces and '\n' 

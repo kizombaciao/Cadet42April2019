@@ -2,7 +2,7 @@
 <?php
     if ($argc != 4) 
     {
-        echo "Incorrect Number of Parameters.\m";
+        echo "Incorrect Number of Parameters.\n";
         exit();
     }
     switch (trim($argv[2], " \t"))
