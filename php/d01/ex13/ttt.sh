@@ -4,4 +4,4 @@
 
 #cat peer_notes_1.csv | ./agent_stats.php average_user
 
-cat peer_notes_1.csv | ./agent_stats.php moulinette_variance
+cat peer_notes_1.csv | ./test.php ecart_moulinette
