@@ -6,13 +6,8 @@
         exit();
     }
     $tmp = str_replace(" ", "", $argv[1]);
-    //echo $tmp."\n";
     $n1 = intval($tmp);
-    //echo $n1."\n";
-    //echo $tmp."\n";
-
     $op = substr(substr($tmp, strlen((string)$n1)), 0, 1);
-    //echo $op."\n";
     $n2 = substr(substr($tmp, strlen((string)$n1)), 1);
     if (!is_numeric($n1) || !is_numeric($n2))
     {

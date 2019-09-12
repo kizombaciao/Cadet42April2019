@@ -1,4 +1,4 @@
-#!/bin/usr/php
+#!/usr/bin/php
 <?php
     if ($argc == 2)
     {

@@ -3,12 +3,8 @@
     while (1)
     {
         echo "Enter a number:  ";
-        $line = trim(fgets(stdin));
-        //if (!$line)
-        //    break;
-
-        //??? why need below test
-        if (feof(stdin))
+        $line = trim(fgets(STDIN));
+        if (feof(STDIN))
         {
             echo "\n";
             exit();

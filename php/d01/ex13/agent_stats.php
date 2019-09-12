@@ -78,14 +78,14 @@
         {
             foreach ($user as $k => $d)
             {
-                echo "111 ".$k.":".($d['sum']/$d['count'])."\n";
+                echo $k.":".($d['sum']/$d['count'])."\n";
             }
         } 
         else 
         {
             foreach ($user as $k => $v)
             {
-                echo "222 ".$k.":".(($d['sum'] / $d['count']) - $d['moulinette'])."\n";
+                echo $k.":".(($d['sum'] / $d['count']) - $d['moulinette'])."\n";
             }
         }
     }

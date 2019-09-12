@@ -17,4 +17,3 @@ foreach ($argv as $w)
     }
 }
 ?>
-
