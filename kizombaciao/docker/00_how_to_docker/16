@@ -1,0 +1,15 @@
+docker logs -f spawning-pool
+
+# Look up the spawning-pool container’s logs in real time 
+# without running its shell.
+
+# -------------------------
+# The docker logs command shows information logged by a running container.
+
+# -f
+# Follow log output
+# The docker logs --follow command will continue streaming the new output 
+# from the container’s STDOUT and STDERR.
+
+# https://docs.docker.com/engine/reference/commandline/logs/
+# https://jaxenter.com/docker-logging-gotchas-137049.html

@@ -1,0 +1,12 @@
+docker service scale marines=20
+
+# Increase the number of copies of the marines service up to twenty, 
+# because there’s never enough Marines to eliminate Zergs. 
+# (Remember to take a look at the tasks and logs of the service, 
+# you’ll see, 
+# it’s fun.)
+
+# -------------------------
+# ???
+# is below command the same ???
+# > docker service udpate --replicas=20 marines 

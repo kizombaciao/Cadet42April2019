@@ -1,0 +1,13 @@
+docker pull hello-world
+
+# Get the hello-world container from the Docker Hub, 
+# where it’s available.
+
+# -------------------------
+# TO LIST IMAGES
+# docker images
+
+# TO REMOVE ALL CONTAINERS
+# docker rm -f $(docker ps -a -q)
+
+# docker info

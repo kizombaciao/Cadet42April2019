@@ -1,0 +1,6 @@
+docker service ps marines
+
+# Display all the tasks of the marines service.
+
+# -------------------------
+

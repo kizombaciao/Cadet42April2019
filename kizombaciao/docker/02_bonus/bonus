@@ -1,0 +1,9 @@
+• A developing environment to code in nodejs, 
+but using yarn rather than npm 
+
+• PAMP (!) with docker-compose, 
+but using MariaDB rather thanMySQL
+
+• Recreate a full MEAN Stack
+
+• Specific Dockerfiles for your C, Ruby, Go, Ocaml, Rust... projects

@@ -1,0 +1,14 @@
+docker inspect --format '{{.NetworkSettings.IPAddress}}' overlord
+
+# Get the internal IP address of the overlord container 
+# without starting its shell and
+# in one command.
+
+# -------------------------
+# // note, this IP address is different from the IP address
+# from docker-machine ip Char
+# // returns 172.17.0.2
+# because this is the internal ip address of the container, not the host !
+
+
+

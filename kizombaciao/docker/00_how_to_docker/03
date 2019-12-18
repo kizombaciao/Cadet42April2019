@@ -1,0 +1,15 @@
+eval $(docker-machine env Char)
+
+# Define the variables needed by your virtual machine Char 
+# in the general env of your terminal, 
+# so that you can run the docker ps command without errors. 
+# You have to fix all four environment variables with one command, 
+# and you are not allowed 
+# to use your shell’s builtin to set these variables by hand.
+
+# -------------------------
+# run below command to see the list of env settings:
+# > docker-machine env Char
+
+# To SSH into Char:
+# docker-machine ssh Char

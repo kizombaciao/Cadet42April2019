@@ -1,0 +1,28 @@
+docker run -d --rm \
+	--name roach-warden \
+	-p 8081:80 \
+	--link spawning-pool:db \
+	phpmyadmin/phpmyadmin
+	
+# -e MYSQL_ROOT_PASSWORD="Kerrigan"
+# Launch a phpmyadmin container as a background task. 
+# It should be named roach-warden, 
+# its 80 port should be bound to the 8081 port of the virtual machine 
+# and it should
+# be able to explore the database stored in the spawning-pool container.
+
+# -------------------------
+
+# ???
+# why 'db' ???
+# why a slash between phpmyadmin ???
+
+# https://hub.docker.com/r/phpmyadmin/phpmyadmin/
+# MYSQL_ROOT_PASSWORD - This variable is mandatory and specifies the password that will be set for the root superuser account.
+
+# First you need to run MySQL or MariaDB server in Docker, 
+# and this image need link a running mysql instance container:
+# > docker run --name myadmin -d --link mysql_db_server:db -p 8080:80 phpmyadmin/phpmyadmin
+
+
+

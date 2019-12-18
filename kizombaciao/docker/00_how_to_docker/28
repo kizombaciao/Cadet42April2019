@@ -1,0 +1,27 @@
+docker service create \
+    --network overmind \
+    --name marines \
+    --replicas 2 \
+    -e OC_USERNAME=user \
+    -e OC_PASSWD=password \
+    42school/marine-squad
+
+
+# ... Damn it, a group of zergs is attacking orbital-command, 
+# and shutting down the engineering-bay service won’t help at all... 
+# You must send a troup of Marines to eliminate the intruders. 
+# Launch a 42school/marine-squad in two replicas, 
+# and make sure that the service works properly 
+# (see the documentation provided at hub.docker.com). 
+# This service will be named... 
+# marines and will be on the overmind network.
+
+# -------------------------
+# note, it is also part of the same network overmind 
+
+# ???
+# i got an error when i ran the above command.
+# it said detected task failure !
+# but now it worked ! not sure what changed.
+
+# https://hub.docker.com/r/42school/marine-squad/

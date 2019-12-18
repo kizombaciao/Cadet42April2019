@@ -1,0 +1,7 @@
+docker-machine rm -y Aiur
+
+# Delete the Aiur virtual machine without using rm -rf.
+
+# -------------------------
+# -y
+# means yes to everything practically.

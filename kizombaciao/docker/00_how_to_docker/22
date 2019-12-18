@@ -1,0 +1,30 @@
+docker-machine ssh Aiur \
+    "docker swarm join --token $(docker swarm join-token worker -q) $(docker-machine ip Char):2377"
+
+# Turn Aiur into a slave of the local swarm in which Char is leader 
+# (the command to take control of Aiur is not requested).
+
+# -------------------------
+# docker swarm join-token worker -q
+# SWMTKN-1-0vopju2xbizrq6tlo1w2vb7lvos5nlkltv3fnoobv7i748vgyv-62p9wqh7ibfhol3doz4bs7uyo
+
+# you can ssh into the worker to run docker swarm join
+# or run the Aiur (worker) vm, and run the docker swarm join directly.
+# but i tried the latter and it did not work.
+
+# how do you find the port number 2377 ?
+# docker-machine env Char
+
+# > echo $(docker swarm join-token worker -q)
+
+# > docker swarm leave // for worker
+# > docker swarm leave --force // in case, of master
+
+# NOT NEEDED:
+# eval $(docker-machine env Aiur)
+# docker swarm join --token $(docker swarm join-token -q) $(docker-machine ip Char):2377
+# echo $(cat ~/.worker_token)
+# this file was created earlier
+
+# https://rominirani.com/docker-swarm-tutorial-b67470cf8872
+

@@ -1,0 +1,41 @@
+apt-get update
+apt-get upgrade -y
+apt-get install -y gcc
+apt-get install -y git
+apt-get install -y build-essential
+apt-get install -y clang
+
+# From the shell of a debian container, 
+# install via the container’s package manager everything 
+# you need to compile C source code 
+# and push it onto a git repo 
+# (of course, make sure before that the package manager 
+# and the packages already in the container are updated). 
+# For this exercise, 
+# you should only specify the commands to be run directly in the container.
+
+# -------------------------
+# run below commands first,
+# docker pull debian
+# docker run -it --rm debian
+
+# // apt-get is a command-line tool 
+# which helps in handling packages in Linux. 
+# Its main task is to retrieve the information 
+# and packages from the authenticated sources for installation, 
+# upgrade and removal of packages along with their dependencies. 
+# Here APT stands for the Advanced Packaging Tool.
+
+# -y flag:
+# Automatic yes to prompts; assume "yes" as answer to all prompts and
+#   run non-interactively. If an undesirable situation, such as
+#   changing a held package, trying to install a unauthenticated
+#   package or removing an essential package occurs then apt-get will
+#   abort. Configuration Item: APT::Get::Assume-Yes.  
+
+# https://www.cyberciti.biz/faq/howto-installing-gnu-c-compiler-development-environment-on-ubuntu/
+
+# The build-essentials package is a reference 
+# for all the packages needed to compile a Debian package. 
+# It generally includes the GCC/g++ compilers 
+# and libraries and some other utilities. 

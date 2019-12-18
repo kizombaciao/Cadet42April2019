@@ -1,0 +1,43 @@
+docker service create -d \
+    --network overmind \
+    --name engineering-bay \
+    --replicas 2 \
+    -e OC_USERNAME=user \
+    -e OC_PASSWD=password \
+    42school/engineering-bay
+
+
+# Launch a 42school/engineering-bay service in two replicas 
+# and make sure that the service works properly 
+# (see the documentation provided at hub.docker.com). 
+# This service will be named engineering-bay 
+# and will be on the overmind network.
+
+# -------------------------
+# https://stackoverflow.com/questions/43408493/what-is-the-difference-between-docker-service-and-docker-container
+# In short: Docker service is used mostly 
+# when you configured the master node with Docker swarm 
+# so that docker containers will run in a distributed environment 
+# and it can be easily managed.
+
+# ???
+# why is there no -p flag for ports ???
+# why the prefix 'oc' ?
+# because it's an environment variables explained in the docker hub page.
+
+# why do i need '42school' ?
+# https://hub.docker.com/r/42school/engineering-bay
+
+# note, engineering-bay is service name, not container name !
+
+# TO SCALE UP OR DOWN THE NUMBER OF CONTAINERS:
+# docker service scale engineering-bay=1
+
+# TO REMOVE
+# docker service rm engineering-bay
+
+# note, a possible good practice
+# use a '_vars' file, that 'declare' and 'export' env variables
+# like how jraleman did
+# and use 'source "_vars";' inside the docker script
+

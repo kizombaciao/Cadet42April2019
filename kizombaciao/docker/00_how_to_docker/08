@@ -1,0 +1,12 @@
+docker run -it --rm alpine
+
+# Launch a shell from an alpine container, 
+# and make sure that you can interact directly 
+# with the container via your terminal, 
+# and that the container deletes itself 
+# once the shell’s execution is done.
+
+# -------------------------
+# // note, the command takes you to the shell without the bin/bash
+# type docker ps -a, to see that the container is not there.
+# type docker images, to see that the alpine image is still there.

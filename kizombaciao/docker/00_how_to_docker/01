@@ -1,0 +1,37 @@
+# docker-machine create -d virtualbox Char
+
+# for more memory to improve speed
+docker-machine create --virtualbox-memory "2048" --virtualbox-cpu-count "4" -d virtualbox Char
+
+# Create a virtual machine with docker-machine 
+# using the virtualbox driver, and named Char.
+
+# -------------------------
+# alias dm='docker-machine'
+# dm ls
+
+# TO DELETE:
+# dm rm Char
+
+# TO START EXISTING MACHINE
+# dm start Char
+
+# dm restart Char
+# dm stop Char
+# dm status Char
+# dm inspect Char
+
+# Until recently Docker didn't run on native Mac or Windows OS, 
+# so another tool was created, Docker-Machine, 
+# which creates a virtual machine (using yet another tool, 
+# e.g. Oracle VirtualBox), runs Docker on that VM, 
+# and helps coordinate between the host OS and the Docker VM.
+
+# Since Docker isn't running on your actual host OS, 
+# docker-machine needs to deal 
+# with IP addresses and ports and volumes and such. 
+# And its settings are saved in environment variables, 
+# which means you have to run commands 
+# like this every time you open a new shell:
+# > eval $(docker-machine env default)
+# > docker-machine ip default

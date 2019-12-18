@@ -1,0 +1,51 @@
+docker service create -d \
+    --network overmind \
+    --name orbital-command \
+    -e RABBITMQ_DEFAULT_USER=user \
+    -e RABBITMQ_DEFAULT_PASS=password \
+    rabbitmq
+
+
+# Launch a rabbitmq SERVICE that will be named orbital-command. 
+# You should define a specific user 
+# and password for the RabbitMQ service, 
+# they can be whatever you want. 
+# This service will be on the overmind network.
+
+# -------------------------
+# With docker service you manage a group of containers (from the same image).
+# https://docs.docker.com/engine/swarm/how-swarm-mode-works/services/
+
+# what is rabbitmq ?
+# https://hub.docker.com/_/rabbitmq
+# If you wish to change the default username and password of guest / guest, you can do so with the RABBITMQ_DEFAULT_USER and RABBITMQ_DEFAULT_PASS environmental variables:
+# $ docker run -d --hostname my-rabbit --name some-rabbit -e RABBITMQ_DEFAULT_USER=user -e RABBITMQ_DEFAULT_PASS=password rabbitmq:3-management
+
+# https://rominirani.com/docker-swarm-tutorial-b67470cf8872
+# > docker service create --replicas 5 -p 80:80 --name web nginx
+# > docker service ls
+
+TO LIST WHICH NODES ARE RUNNING:
+# > docker service ps web
+# > docker ps   // on manager1 node
+
+# TO INCREASE THE NUMBER OF CONTAINERS TO 8 FROM 5:
+# > docker service scale web=8
+
+# Ideally you would put the Docker Swarm service 
+# behind a Load Balancer.
+
+# TO SEE STATUS OF THE NODES:
+# > docker node ls
+
+# TO INSPECT:
+# > docker node inspect self
+# > docker node inspect worker1
+
+# > docker node ps worker1
+
+# TO STOP OR DRAIN worker1 container:
+# > docker node update --availability drain worker1
+
+# TO REMOVE THE SERVICE:
+# > docker service rm web

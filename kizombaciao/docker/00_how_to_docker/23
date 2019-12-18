@@ -1,0 +1,20 @@
+docker network create -d overlay overmind
+
+# Create an overlay-type internal network 
+# that you will name overmind.
+
+# r8u7qv7nlefqbv55vawre9qda
+
+# -------------------------
+# docker network ls
+
+# https://dzone.com/articles/creating-a-docker-overlay-network
+
+# it's usually not practical to run all your applications on a single machine 
+# and when it's not, 
+# you'll need an approach for distributing the applications across many machines. 
+# This is where a Docker Swarm comes in.
+
+# how you can create a Docker swarm overlay network 
+# that will allow DNS discovery of members 
+# and allow members to communicate with one another.

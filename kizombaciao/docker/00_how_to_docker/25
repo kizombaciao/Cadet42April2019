@@ -1,0 +1,13 @@
+docker service ls
+
+# List all the services of the local swarm.
+
+# engineering-bay (not yet)
+# orbital-command
+
+# -------------------------
+
+# > docker node ls
+# Aiur
+# Char
+

@@ -1,0 +1,7 @@
+docker restart overlord
+
+# Relaunch the overlord container.
+
+# -------------------------
+# HOW TO RESTART the CONTAINER, overlord:
+# docker restart overlord
