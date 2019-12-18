@@ -1,0 +1,9 @@
+# red
+# Do the same with 42.fr, what do you notice?
+
+nslookup 42.fr | grep "Address: " | awk '{print $2}' | sort
+
+163.172.250.12
+163.172.250.13
+
+Again the IP address are very similar.

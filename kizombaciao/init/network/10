@@ -1,0 +1,16 @@
+# Identify the network devices between your computer and the slash16.org domain
+
+traceroute slash16.org
+
+# https://shapeshed.com/unix-traceroute/
+# shows how a data transmission travelled 
+# from a local machine to a remote one.
+# A typical example would be loading a web page. 
+# Loading a web page over the internet 
+# involves data flowing through a network 
+# and a number of routers. 
+# The traceroute command can show the route taken 
+# and the IP and hostnames of routers on the network. 
+# It can be useful for understanding latency 
+# or diagnosing network issues.
+# https://www.digitalocean.com/community/tutorials/how-to-use-traceroute-and-mtr-to-diagnose-network-issues

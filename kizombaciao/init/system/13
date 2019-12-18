@@ -1,0 +1,12 @@
+# Name the command that find currently running processes
+
+ps -aux
+
+# https://www.complexsql.com/process-commands/
+
+# -a : This option shows all running processes 
+# on terminal with exception of group leaders.
+
+# -u : This options fetches the information of user and what user is doing.
+
+

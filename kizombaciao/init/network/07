@@ -1,0 +1,28 @@
+# Query an external DNS server on the slash16.org domain name (ie. : google 8.8.8.8)
+
+nslookup slash16.org 8.8.8.8
+
+# Server:		8.8.8.8
+# Address:	8.8.8.8#53
+# 
+# Non-authoritative answer:
+# Name:	slash16.org
+# Address: 99.84.201.227
+# Name:	slash16.org
+# Address: 99.84.201.183
+# Name:	slash16.org
+# Address: 99.84.201.118
+# Name:	slash16.org
+# Address: 99.84.201.208
+
+# for querying the Domain Name System (DNS) to obtain domain name 
+# or IP address mapping information. 
+# The main use of nslookup is 
+# for troubleshooting DNS related problems.
+# http://www.steves-internet-guide.com/using-nslookup/
+# Find the IP address of a host.
+# Find the domain name of an IP address.
+# Find mail servers for a domain.
+# Dig was initially meant to replace nslookup but didn’t.
+
+# USE GOOGLE DNS SERVER TO FIND IP ADDRESS FOR THE URL !!!

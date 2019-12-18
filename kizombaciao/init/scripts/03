@@ -1,0 +1,30 @@
+# Write a script which displays the list of files 
+# from the folder given as parameter, sorted by size.
+
+
+#!/bin/bash
+if [ -d $1 ]
+then
+    ls -alSr $1/*
+else
+    echo "Error"
+fi
+
+
+# [ -d file ] :
+# -d True if FILE exists and is a directory.
+
+#ls -sh $1/* | sort -h
+# https://www.unix.com/unix-for-dummies-questions-and-answers/90037-what-1-a.html
+# $1 is the first commandline argument. 
+# If you run ./asdf.sh a b c d e, 
+# then $1 will be a, $2 will be b, etc. 
+# In shells with functions, $1 may serve as the first function parameter, 
+# and so forth.
+
+# https://stackoverflow.com/questions/8778017/what-does-1-mean-in-for-file-in-1
+
+
+# sort -alS # from largest to smallest
+# sort -alSr # from smalllest to largest
+# https://alvinalexander.com/blog/post/linux-unix/sort-unix-directory-listing-by-file-size

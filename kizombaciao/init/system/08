@@ -1,0 +1,15 @@
+# red
+# What file contains the RSA keys that are authorized to connect via SSH?
+
+cat ~/.ssh/authorized_keys
+
+# have to create it, if the file is not there.
+# https://www.ssh.com/ssh/authorized_keys/
+
+# i ran ssh-keygen beforehand to get .ssh directory !
+# https://www.digitalocean.com/community/tutorials/how-to-set-up-ssh-keys-on-debian-9
+
+# touch authorized_keys then echo "key here" >> authorized_keys
+# you would put in the public key from the user of the machine you want to give access to that user acct
+# then try to ssh without a password and it should log right in using the key
+# test functionality with password first

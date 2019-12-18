@@ -1,0 +1,7 @@
+# red
+# In what file can you find the installed version of your Debian?
+
+cat /etc/debian_version
+
+# installation: debian vm on virtual box:
+# https://www.youtube.com/watch?v=rs6sI-mav5Q

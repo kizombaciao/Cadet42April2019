@@ -1,0 +1,42 @@
+# Identify the MAC address of the Wi-Fi card
+
+ifconfig en1 | awk '/ether/{print $2}'
+
+# 28:f0:76:3e:ef:82
+
+# It searches one or more files to see 
+# if they contain lines that matches 
+# with the specified patterns 
+# and then performs the associated actions.
+
+# First, your computer doesn't have a MAC address. 
+# Your network card has a MAC address. 
+# So if you have a wireless card 
+# and an Ethernet card, you'll have two MAC addresses.
+# ifconfig | grep ether
+
+# how do we know en1 is the wifi card ???
+
+# By default, 
+# en0 and en1 are your physical network connections 
+# (wired and wireless LAN). 
+# lo0 is the loopback interface. 
+# fw0 is the IP over Firewire interface.
+# vmnet interfaces are installed by VMware 
+# for network communication with virtual machines.
+
+# https://www.lifewire.com/introduction-to-mac-addresses-817937
+
+# On systems with both an ethernet and wireless connection, 
+# en0 will be your ethernet interface 
+# and en1 will be your wireless interface. 
+# A MAC address will be shown 
+# for both en0 and en1 and likely labelled as "ether".
+
+# On systems with just a wireless connection, 
+# en0 will be your wireless interface. 
+# The MAC address for en0 will likely be labelled as "ether".
+
+# on apple computers, sysinfo>network>wifi>interfaces>MAC address
+
+# TO FIND THE MAC ADDRESS !!!

@@ -1,0 +1,12 @@
+# Get the list of the network interfaces of the machine 
+# without displaying any detail for these interfaces. 
+# Only the list of names.
+# to get MAC addresses:
+# ifconfig | grep "ether " | sed 's/\(.*\)ether //g'
+
+ifconfig -l
+
+# output
+# lo0 gif0 stf0 XHC20 en0 en1 en2 en3 p2p0 awdl0 bridge0 utun0
+
+# TO SEE THE LIST OF NETWORK INTERFACES !!!

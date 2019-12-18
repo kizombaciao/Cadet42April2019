@@ -1,0 +1,28 @@
+# Write a script which displays
+# only the login, UID and Path 
+# of each entry of the /etc/passwd file.
+
+#!/bin/bash
+
+cat /etc/passwd | cut -d ":" -f 1,3,6
+
+# A UID (user identifier) is a number assigned 
+# by Linux to each user on the system. 
+# This number is used to identify 
+# the user to the system 
+# and to determine which system resources the user can access. 
+# UIDs are stored in the /etc/passwd file: ... 
+# Groups in Linux are defined by GIDs (group IDs).
+
+# $cut -d "delimiter" -f (field number) file.txt
+# https://www.geeksforgeeks.org/cut-command-linux-examples/
+# we use colon as delimiter in above case
+# and extract field 1, 3, and 6.
+
+# https://askubuntu.com/questions/141928/what-is-the-difference-between-bin-sh-and-bin-bash
+# bash and sh are two different shells. 
+# Basically bash is sh, with more features and better syntax.
+
+# "#!" is an operator called shebang 
+# which directs the script to the interpreter location. 
+# So, if we use"#! /bin/sh" the script gets directed to the bourne-shell.

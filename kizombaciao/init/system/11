@@ -1,0 +1,8 @@
+# Name the command 
+# that displays the available space left on the system?
+
+df -h /
+df -h
+
+# https://www.cyberciti.biz/faq/linux-command-space-left-on-hard-disk-drive/
+

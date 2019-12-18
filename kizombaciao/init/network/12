@@ -1,0 +1,20 @@
+# Check that the server with the 10.51.1.253 IP address 
+# is reachable from your computer.
+
+ping 10.51.1.253
+
+# PING 10.51.1.253 (10.51.1.253): 56 data bytes
+# 64 bytes from 10.51.1.253: icmp_seq=0 ttl=62 time=20.862 ms
+# 64 bytes from 10.51.1.253: icmp_seq=1 ttl=62 time=1.205 ms
+# 64 bytes from 10.51.1.253: icmp_seq=2 ttl=62 time=0.362 ms
+
+# DHCP:
+# > Dynamic Host Configuration Protocol
+# > purpose is to assign unique IP addresses to our hosts
+# > also, provides network addresses for subnet mask, default gateway, and DNS address
+
+
+# Find the IP that was assigned to you by dhcp server
+# ipconfig getoption en0 server_identifier
+# 10.51.1.253
+# why is it the same as the ip address of DNS from ex05 ???

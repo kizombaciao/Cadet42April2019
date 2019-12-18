@@ -1,0 +1,26 @@
+# red
+# Use the output of the previous command to find the name and IP address of the
+device that makes the link between you (local network) and the outside world
+
+traceroute slash16.org | sed '2,/end string pattern/d'
+
+# nat (10.90.1.11)
+
+# ???
+
+# which is also the default gateway
+# netstat -nr | grep default | head -1 | awk '{print $2}'
+
+# https://www.geeksforgeeks.org/sed-command-in-linux-unix-with-examples/
+# Replacing string on a specific line number
+# $sed '3 s/unix/linux/' geekfile.txt
+# delete:
+# Delete the pattern space; immediately start next cycle.
+
+# Network Address Translation (NAT) is the process where a network device, 
+# usually a firewall, assigns a public address to a computer 
+# (or group of computers) inside a private network. 
+# The main use of NAT is to limit the number of public IP addresses 
+# an organization or company must use, for both economy and security purposes.
+
+# BASICALLY, THE SAME AS FINDING THE DEFAULT GATEWAY !!!

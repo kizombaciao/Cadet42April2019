@@ -1,0 +1,15 @@
+# Name the command that lists 
+# the partition tables of external devices?
+
+fdisk -l
+
+# https://vitux.com/4-ways-to-view-the-partition-table-in-linux/
+
+# Get list of partitions with the fdisk command
+# The fdisk command that stands for Format-disk or Fixed-disk is basically used to create or delete hard disk partitions. It is also used to format the disk, however, here we will use it to list the partitions table by using a particular flag with it.
+# 
+# The -l flag is used with the fdisk to list the partitions table of the specified device and then exit. When you do not mention any device name, fdisk uses the devices mentioned in the /proc/partitions file.
+# 
+# The -l option shows the partition tables for the specified devices and then exit. If no devices are given, those mentioned in /proc/partitions (if that exists) are used. 
+
+# https://www.computerhope.com/jargon/p/partition.htm

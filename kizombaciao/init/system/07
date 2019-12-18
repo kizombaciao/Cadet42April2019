@@ -1,0 +1,14 @@
+# Figure out the PID of the SSHD service.
+
+
+systemctl status ssh | grep 'Main PID'
+# systemctl status ssh | grep 'Main PID' | awk -F '[ ]' '{print $3" " $4}'
+
+# awk
+# https://www.geeksforgeeks.org/awk-command-unixlinux-examples/
+
+# -F fs            : Use fs for the input field separator
+
+# process identifier, a PID is a unique number 
+# that identifies each of the running processes in an operating system, 
+# such as Linux

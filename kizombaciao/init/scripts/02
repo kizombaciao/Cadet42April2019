@@ -1,0 +1,53 @@
+# Write a script which updates all the package sources, 
+# then all the packages, 
+# and then logs everything 
+# in a file named /var/log/update_script.log. 
+# Create a scheduled task for this script, 
+# once per week at 4 AM.
+
+
+#!/bin/bash
+
+echo 'apt-get update && apt-get upgrade >> /var/log/update_script.log' >> ~/task.sh
+
+echo '0 4 * * 1 root sh ~/task.sh' | crontab
+
+
+# https://www.ostechnix.com/a-beginners-guide-to-cron-jobs/
+# Minute(0-59) Hour(0-24) Day_of_month(1-31) Month(1-12) 
+# Day_of_week(0-6) Command_to_execute
+
+# You should first run update, then upgrade. 
+# Neither of them automatically runs the other.
+# apt-get update updates the list of available packages 
+# and their versions, but it does not install or upgrade any packages.
+# apt-get upgrade actually installs newer versions of the packages you have. 
+# After updating the lists, 
+# the package manager knows about available updates 
+# for the software you have installed. 
+# This is why you first want to update.
+# Additionally, you can use apt-get update && apt-get upgrade 
+# to do both steps after each other.
+
+# apt-get update doesn't actually install new versions of software. 
+# Instead, it updates the package lists for upgrades for packages 
+# that need upgrading, as well as new packages 
+# that have just come to the repositories.
+
+# > redirects output to a file, overwriting the file.
+# >> redirects output to a file 
+# appending the redirected output at the end.
+
+# What Is a Cron Job? 
+# cron is a Linux utility which schedules 
+# a command or script on your server 
+# to run automatically at a specified time and date.
+
+# https://helpdeskgeek.com/linux-tips/find-and-change-your-hostname-in-ubuntu/
+
+# http://www.linfo.org/root.html
+# root sh # means running sh as a root user
+# root is the user name or account 
+# that by default has access to all commands and files 
+# on a Linux or other Unix-like operating system. 
+# It is also referred to as the root account, root user and the superuser.

@@ -1,0 +1,7 @@
+# With the previous command, forbid all others
+
+iptables -P INPUT DROP
+iptables -P OUTPUT DROP
+
+# https://www.digitalocean.com/community/tutorials/iptables-essentials-common-firewall-rules-and-commands
+

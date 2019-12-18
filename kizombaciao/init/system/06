@@ -1,0 +1,6 @@
+# Name the command that reboots the SSH service.
+
+systemctl restart ssh
+
+# https://www.geeksforgeeks.org/systemctl-in-unix/
+

@@ -1,0 +1,18 @@
+# red
+# What file contains the local DNS entries?
+
+cat /etc/hosts
+
+127.0.0.1       localhost
+255.255.255.255 broadcasthost
+::1             localhost
+
+#10.51.1.38 	cdn.intra.42.fr
+127.0.0.1 e1z2r1p1.42.fr
+
+# but earlier, we had the DNS as ???
+10.51.1.253
+
+# If they're saying local they mean manual mappings
+
+# cat /etc/hosts !!!

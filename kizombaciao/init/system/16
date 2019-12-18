@@ -1,0 +1,9 @@
+# red
+# Find the service 
+# which makes it possible to run specific tasks 
+# following a regular schedule
+
+cron
+
+# https://www.ostechnix.com/a-beginners-guide-to-cron-jobs/
+

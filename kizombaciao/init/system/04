@@ -1,0 +1,11 @@
+# What command gives you the time since your system was last booted?
+
+uptime
+
+# Uptime is a command 
+# that returns information 
+# about how long your system has been running together 
+# with the current time, 
+# number of users with running sessions, 
+# and the system load averages for the past 1, 5, and 15 minutes.
+# https://www.geeksforgeeks.org/linux-uptime-command-with-examples/

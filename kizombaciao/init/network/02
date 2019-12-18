@@ -1,0 +1,25 @@
+# Identify the IP address of the Ethernet interface
+
+ifconfig -L en0 | grep "inet" | cut -d " " -f 2
+
+# 10.112.1.1
+
+# ifconfig -L en0 ???
+# grep - print lines matching a pattern.
+# cut - cutting out the sections from each line of files.
+
+# cut -d " " -f 2
+# using space as delimiter, show 2nd field of each line.
+
+# output
+# fe80::10da:4504:b79:8366%en0
+# 10.112.7.9
+
+# how do we know en0 represent the ethernet interface ???
+
+# networksetup -getinfo Ethernet
+
+# Ethernet is a way of connecting computers together 
+# in a local area network or LAN.
+
+# TO FIND THE IP ADDRESS OF THE ETHERNET INTERFACE !!!

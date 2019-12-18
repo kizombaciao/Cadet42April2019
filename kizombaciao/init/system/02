@@ -1,0 +1,19 @@
+# What command can you use to rename your system?
+
+sudo hostname new_hostname
+
+# to see the current hostname:
+# hostname
+
+# A host name is a name that is assigned to a host 
+# (i.e., a computer connected to the network) 
+# that uniquely identifies it on a network 
+# and thus allows it to be addressed 
+# without using its full IP address. 
+# Domain names are user-friendly substitutes 
+# for numeric IP addresses.
+
+# hostname command in Linux 
+# is used to obtain the DNS(Domain Name System) name 
+# and set the system’s hostname 
+# or NIS(Network Information System) domain name.

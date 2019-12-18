@@ -1,0 +1,9 @@
+# With the previous command, 
+# authorize only IP addresses 
+# from 10.0.0.0/8 to con- nect to your system
+
+iptables -A INPUT -s 10.0.0.0/8 -j ACCEPT
+iptables -A OUTPUT -d 10.0.0.0/8 -j ACCEPT
+
+# https://www.digitalocean.com/community/tutorials/iptables-essentials-common-firewall-rules-and-commands
+# https://www.digitalocean.com/community/tutorials/how-to-set-up-a-basic-iptables-firewall-on-centos-6

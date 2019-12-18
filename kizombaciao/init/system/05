@@ -1,0 +1,21 @@
+# Name the command that determines the state of the SSH service.
+
+systemctl status ssh
+
+# ? when i ran the command, it did not recognize the command
+# because your user did not have root access
+# to give user sudo access, type 'su root'
+# systemctl list-unit-files --state=enabled
+# can see whether ssh has been installed
+# if not, then type 'sudo apt install openssh-server'
+# to check status, type 'sudo systemctl enable ssh'
+
+# sudo apt-get update
+# sudo apt-get install openssh-server
+
+# sudo systemctl status ssh   # get service's status
+# sudo systemctl start ssh    # start the service
+# sudo systemctl stop ssh     # stop the service
+# sudo systemctl restart ssh  # restart the service
+# sudo systemctl enable ssh   # start the service during system boot
+# sudo systemctl disable ssh  # don't start the service during system boot

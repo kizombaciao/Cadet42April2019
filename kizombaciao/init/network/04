@@ -1,0 +1,32 @@
+# Identifiy the default gateway in the routing table
+
+netstat -nr | grep default | head -1 | awk '{print $2}'
+
+# 10.112.254.254
+
+# netstat's '-n' flag shows network addresses as numbers. 
+# When this flag is not specified, 
+# the netstat command interprets addresses 
+# where possible and displays them symbolically. 
+# This flag can be used with any of the display formats.
+
+# netstat's '-r' flag shows the routing tables. 
+# When used with the -s flag, the-r flag shows routing statistics. 
+
+# 'head -1' will show first line from piped input.
+
+# network statistics
+# shows very detailed info on how your computer is communicating 
+# with other computers or network devices.
+# which ports and addresses the corresponding connections 
+# (TCP, UDP) are running 
+# and which ports are open for tasks.
+# https://www.geeksforgeeks.org/netstat-command-linux/
+
+# DEFAULT GATEWAY:
+# > connects a local network to the internet.
+# > In home or small business networks with a broadband router 
+# > to share the internet connection, 
+# > the home router serves as the default gateway.
+
+# TO FIND THE DEFAULT GATEWAY !!!

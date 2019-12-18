@@ -1,0 +1,8 @@
+# red
+# What file has to be modified to make it permanent?
+
+/etc/hostname
+
+# note that despite using the command hostname in 02 
+# to change the name
+# the above file was not altered.

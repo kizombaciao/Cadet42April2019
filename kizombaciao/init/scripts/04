@@ -1,0 +1,76 @@
+# Write a script which monitors the modifications 
+# made to the /etc/crontab file 
+# and sends an e-mail to root if the file is modified. 
+# Create a scheduled task to run this script everyday at midnight.
+
+#!/bin/bash
+
+LASTMD5=$(</root/crontabchecksum)
+CURRENTMD5=$(md5sum /etc/crontab | cut -d " " -f 1)
+
+echo $LASTMD5
+echo $CURRENTMD5
+
+if [ $LASTMD5 != $CURRENTMD5 ]
+then
+    md5sum /etc/crontab | cut -d " " -f 1 > /root/crontabchecksum
+    mail -s "The file crontab was modified" root@localhost.com < /etc/crontab
+fi
+
+# we add this scheduled cron job to /etc/crontab
+# 0 0 0 * 0-6   root    sh /root/crontab_checksum.sh
+
+
+# KEY TRICK:
+# https://stackoverflow.com/questions/7427262/how-to-read-a-file-into-a-variable-in-shell
+# #!/bin/bash
+# value=$(<config.txt)
+# echo "$value"
+# ---------------------
+# #!/bin/sh
+# value=`cat config.txt`
+# echo "$value"
+# ---------------------
+# https://unix.stackexchange.com/questions/4569/storing-output-of-command-in-shell-variable
+# and use this for commands
+# https://stackoverflow.com/questions/20688552/assigning-the-output-of-a-command-to-a-variable
+
+# md5sum /etc/crontab
+# hashes the file into a checksum
+
+# cut -d " " -f 1
+# takes only field one which is the checksum.
+# don't want field 2, which is the path
+
+# METHOD TO SEE IF FILE HAS BEEN ALTERED: 
+# md5sum file1.txt file2.txt file3.txt > hashes
+# md5sum --check hashes
+# echo "!" >> file3.txt
+# md5sum --check hashes
+
+# https://www.howtoforge.com/linux-md5sum-command/
+# https://www.lifewire.com/validate-md5-checksum-file-4037391
+# checksum = hash value
+# While security flaws in the MD5 algorithm have been uncovered, 
+# MD5 hashes are still useful 
+# when you trust the organization that produces them. 
+# Moving to more secure hashes like SHA-256 and Whirlpool
+
+# https://www.youtube.com/watch?v=pYNuKXjcriM
+# sha1sum [filename] | grep [checksum]
+# if you get the checksum back, then it means it matched
+# if you get nothing back, then it did not match.
+
+# https://www.folkstalk.com/2012/08/mail-command-examples-in-unix-linux.html
+# https://www.cyberciti.biz/faq/email-howto-send-text-file-using-unix-appleosx-bsd/
+# mail -s 'Subject-Here' you@cyberciti.biz < input.file
+# mail -s 'Uptime Report' you@cyberciti.biz < /tmp/output.txt
+# Where,
+# -s ‘Subject’ : Specify subject on command line.
+# you@cyberciti.biz: To email user.
+# /tmp/output.txt : Send the content of /tmp/output.txt file using mail command.
+
+# crontab
+# https://www.youtube.com/watch?v=QZJ1drMQz1A
+# 0 0 * * 1 echo 'Hello' >> /tmp/test.txt
+# this will run the command every monday at 12 AM.

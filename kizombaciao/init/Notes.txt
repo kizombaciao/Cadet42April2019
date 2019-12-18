@@ -1,0 +1,129 @@
+
+> destination port number
+
+> ifconfig
+# interface configuration
+
+> loopback address ?
+
+> mac address ?
+# Media Access Control
+# each device in your home has a mac address.
+# how is mac address different from private network address ???
+
+
+> network interface ?
+
+> source port number
+
+> tcp header ?
+# contains info on how to reassemble the chopped up packets.
+
+
+> tcp/ip:
+# transmission control protocol
+# internet protocol
+# application layer
+# transport layer
+# internet layer
+# network layer
+
+TCP VS UDP:
+> https://www.youtube.com/watch?v=0-MldfyhIuo
+> UDP is used for streaming
+since you don't need a handshake to confirm
+that all packages have been received.
+unlike TCP.
+
+> virtual box ?
+
+///////////////////////////
+HOW NETWORK ADDRESS TRANSLATION WORK:
+https://www.youtube.com/watch?v=QBqPzHEDzvo
+
+
+DHCP:
+> Dynamic Host Configuration Protocol
+> purpose is to assign unique IP addresses to our hosts
+> also, provides network addresses for subnet mask, default gateway, and DNS address
+
+ETHERNET:
+> LAN - local area network
+> wired system
+> IEEE 802.3 standard
+
+home router:
+> is connected to the ISP.
+
+INIT:
+> The fundamental purpose of an init system 
+is to initialize the components 
+that must be started after the Linux kernel is booted 
+(traditionally known as “userland” components). 
+The init system is also used to manage services 
+and daemons for the server at any point 
+while the system is running. 
+https://www.digitalocean.com/community/tutorials/how-to-use-systemctl-to-manage-systemd-services-and-units
+
+ip v4 vs ip v6:
+> the latter has many more addresses than the mere 4 billion with ip v4
+> ip v6 eliminates the need for router to disseminate packets within private network.
+
+NAT forwarding table:
+> Network Address Translation
+> tells you whether the return packet from webserver goes to laptop or tablet.
+> single point of failure
+
+NETSTAT:
+Netstat — derived from the words network and statistics 
+— is a program that's controlled via commands 
+issued in the command line. 
+It delivers basic statistics on all network activities 
+and informs users on which ports and addresses 
+the corresponding connections (TCP, UDP) are running 
+and which ports are open for tasks.
+
+OSI Model
+The OSI Model consist of several layers.
+Layer 1 - Physical (Lowest-level)
+Layer 2 - Data Link
+Layer 3 - Network
+Layer 4 - Transport
+Layer 5 - Session
+Layer 6 - Presentation
+Layer 7 - Application Layer (Highest-level)
+https://www.youtube.com/playlist?list=PLR0bgGon_WTKY2irHaG_lNRZTrA7gAaCj
+
+
+port 80:
+> frequently, used for http traffic
+
+private networks:
+> 192.168.x.x
+> 10.x.x.x
+
+private vs public address:
+
+PUBLIC IP ADDRESS:
+> what the world sees as your address
+
+ROOT:
+> On every Linux system, 
+the root account is a special user 
+that has administrative rights.
+
+ROUTING TABLE:
+> A routing table is a set of rules, 
+often viewed in table format, 
+that is used to determine 
+where data packets traveling 
+over an Internet Protocol (IP) network will be directed. 
+All IP-enabled devices, including routers and switches, 
+use routing tables.
+
+> smtp:
+# for emails
+
+SSID:
+> wireless network name
+> Service Set Identifier

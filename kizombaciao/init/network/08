@@ -1,0 +1,14 @@
+# red
+# Are the returned IP addresses similiar?
+
+The question is a bit ambiguous.
+
+If comparing 06 vs 07:
+No, because one is for the IP address of slash16.org
+and the other is address of the DNS server.
+
+If comparing the multiple IP addresses returned for slash16.org:
+They do look similar, except for the last sequence.
+
+# host -t a slash16.org
+# hostingchecker.com

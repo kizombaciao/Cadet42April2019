@@ -1,0 +1,7 @@
+# Find the command which gives the list of firewall rules
+
+sudo iptables -L 
+
+# https://www.digitalocean.com/community/tutorials/how-to-list-and-delete-iptables-firewall-rules
+# IPTables is a front-end tool to talk to the kernel and decides the packets to filter.
+# https://www.tecmint.com/basic-guide-on-iptables-linux-firewall-tips-commands/

@@ -1,0 +1,7 @@
+# Find the command that kills the background command’s process
+
+pkill tail
+
+# https://www.howtoforge.com/linux-pkill-command/
+# https://www.thegeekstuff.com/2009/12/4-ways-to-kill-a-process-kill-killall-pkill-xkill/
+
